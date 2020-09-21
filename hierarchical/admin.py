@@ -1,8 +1,8 @@
 from django.contrib import admin
-from mptt.admin import DraggableModelAdmin
+from mptt.admin import DraggableMPTTAdmin
 # Register your models here.
 
-from hierarchical.models import Genre
+from hierarchical.models import Desserts
 
 
-admin.site.register(Genre, DraggableModelAdmin)
+admin.site.register(Desserts, DraggableMPTTAdmin)

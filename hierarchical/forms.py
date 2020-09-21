@@ -1,8 +1,8 @@
 from django import forms
-from hierarchical import Genre
+from hierarchical.models import Desserts
 from mptt.forms import TreeNodeChoiceField
 
 
-class AddFilesForm(forms.Form):
+class AddDessertForm(forms.Form):
     name = forms.CharField(max_length=48)
-    parent = TreeNodeChoiceField(quertset=Genre.objects.all())
+    parent = TreeNodeChoiceField(queryset=Desserts.objects.all())
